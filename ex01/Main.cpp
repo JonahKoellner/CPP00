@@ -6,7 +6,7 @@
 /*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:05:10 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/08 13:56:21 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/09/18 10:45:28 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 #include "PhoneBook.hpp"
 
 std::string toupper(std::string string){
-	for (int iter = 0; iter < string.size(); iter++){
+	for (size_t iter = 0; iter < string.size(); iter++){
 		string[iter] = (string[iter] >= 'a' && string[iter] <= 'z') ? string[iter] -= 32 : string[iter];
 	}
 	return (string);

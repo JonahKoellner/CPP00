@@ -6,7 +6,7 @@
 /*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 11:10:19 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/08 14:31:59 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/09/18 10:48:00 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void PhoneBook::AddContact(){
 }
 
 void PhoneBook::SaveContact(Contact con){
-	if (contact_num < (sizeof(contact_list) / sizeof(Contact)))
+	if ((unsigned int)contact_num < (sizeof(contact_list) / sizeof(Contact)))
 		contact_list[contact_num++] = con;
 	else{
 		for (int iter = 0; iter < contact_num - 1; iter++){

@@ -6,7 +6,7 @@
 /*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:22:56 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/08 13:52:59 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/09/18 10:47:21 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void Contact::FillContact(std::string fn, std::string ln, std::string nn, std::s
 }
 
 std::string TruncateString(std::string string, int max, std::string TruncateString){
-	if (string.size() > max)
+	if (string.size() > (size_t)max)
 		return (string.substr(0, max - 1).append(TruncateString));
 	return (string);
 }
