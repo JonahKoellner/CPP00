@@ -6,14 +6,14 @@
 #    By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/08 09:50:40 by jkollner          #+#    #+#              #
-#    Updated: 2023/09/08 12:26:54 by jkollner         ###   ########.fr        #
+#    Updated: 2023/09/20 09:44:08 by jkollner         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-name = MyAwesomePhonebook
+name = Accounts
 cc = c++
 cflags = -Wall -Werror -Wextra -std=c++98
-src = Main.cpp Contact.cpp PhoneBook.cpp
+src = test.cpp Account.cpp
 obj = ${src:.cpp=.o}
 
 all: ${name}
