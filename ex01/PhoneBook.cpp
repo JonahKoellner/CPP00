@@ -6,7 +6,7 @@
 /*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 11:10:19 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/18 10:48:00 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:55:18 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,15 @@ void PhoneBook::PreviewContacts(){
 void PhoneBook::AddContact(){
 	std::string fn, ln, nn, pn, sec;
 	std::cout << "First Name:";
-	std::cin >> fn;
+	std::getline(std::cin, fn);
 	std::cout << "Last Name:";
-	std::cin >> ln;
+	std::getline(std::cin, ln);
 	std::cout << "Nick name:";
-	std::cin >> nn;
+	std::getline(std::cin, nn);
 	std::cout << "Phone Number:";
-	std::cin >> pn;
+	std::getline(std::cin, pn);
 	std::cout << "Secret:";
-	std::cin >> sec;
+	std::getline(std::cin, sec);
 	if (!(fn.empty() || ln.empty() || nn.empty() || pn.empty() || sec.empty())){
 		Contact con;
 		con.FillContact(fn, ln, nn, pn, sec);

@@ -6,7 +6,7 @@
 /*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:05:10 by jkollner          #+#    #+#             */
-/*   Updated: 2023/09/18 10:45:28 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:54:37 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main()
 	{
 		std::cout << std::endl;
 		std::cout << "M_A_P>:";
-		std::cin >> user_input;
+		std::getline(std::cin, user_input);
 		user_input = toupper(user_input);
 		if (!std::cin)
 			return((std::cout << "There seems to be an error with std::cin !!!" << std::endl), 1);
@@ -50,16 +50,20 @@ int main()
 		{
 			pb.PreviewContacts();
 			int index;
+			std::string index_input;
 			std::cout << std::endl;
 			std::cout << "Index of Entry:";
-			std::cin >> index;
-			if (std::cin.fail()){
-				std::cout << "This was not an index." << std::endl;
-				std::cin.clear();
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear the remaining input
-			}
-			else
+			std::getline(std::cin, index_input);
+			try
+			{
+				index = std::stoi(index_input);
 				pb.SeeContact(index);
+			}
+			catch(const std::exception& e)
+			{
+				std::cerr << "This was not an index." << '\n';
+				//std::cerr << e.what() << '\n';
+			}
 		}
 	}
 }
