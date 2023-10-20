@@ -6,7 +6,7 @@
 /*   By: jkollner <jkollner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 13:47:59 by jonahkollne       #+#    #+#             */
-/*   Updated: 2023/10/20 12:27:59 by jkollner         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:57:16 by jkollner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int Account::_totalNbWithdrawals = 0;
 Account::Account( int initial_deposit){
 	_amount = initial_deposit;
 	_totalAmount += initial_deposit;
-	// _totalNbDeposits += 1;
-	// _nbDeposits += 1;
 	_accountIndex = _nbAccounts;
 	_nbAccounts += 1;
 	_displayTimestamp();
@@ -30,7 +28,6 @@ Account::Account( int initial_deposit){
 }
 
 Account::Account( void ){
-	// std::cout <<
 	_accountIndex = _nbAccounts;
 	_nbAccounts++;
 }
